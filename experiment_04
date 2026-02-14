@@ -1,0 +1,33 @@
+SELECT *
+FROM employee
+WHERE hiredate < '1980-06-30'
+   OR hiredate > '1981-12-31';
+SELECT ename
+FROM employee
+WHERE ename LIKE '_A%';
+SELECT ename
+FROM employee
+WHERE LENGTH(ename)=5;
+SELECT ename
+FROM employee
+WHERE ename LIKE '_A%';
+SELECT ename
+FROM employee
+WHERE job NOT IN ('SALESMAN','CLERK','ANALYST');
+SELECT ename, sal*12 AS annual_salary
+FROM employee
+ORDER BY sal DESC;
+SET SQL_SAFE_UPDATES = 0;
+UPDATE employee
+SET sal = sal*1.10
+WHERE comm IS NULL;
+UPDATE employee
+SET sal = sal*1.10
+WHERE comm IS NULL;
+SELECT *
+FROM employee
+WHERE sal*1.20 > 3000;
+SELECT *
+FROM employee
+WHERE sal >= 100;
+

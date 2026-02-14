@@ -1,0 +1,33 @@
+SELECT e.empno, e.ename, d.dname
+FROM employee e
+JOIN department d
+ON e.deptno = d.deptno;
+SELECT DATEDIFF(CURDATE(),'2000-01-01') AS age_days;
+SELECT TIMESTAMPDIFF(MONTH,'2000-01-01',CURDATE()) AS age_months;
+SELECT DATE_FORMAT('1997-08-15','%D %M %W %Y');
+SELECT CONCAT(ename,' has joined the company on ',
+DATE_FORMAT(hiredate,'%W %D %M %Y'))
+FROM employee;
+SELECT DATE_ADD(CURDATE(),
+INTERVAL (7-DAYOFWEEK(CURDATE())) DAY);
+SELECT CURTIME();
+SELECT DATE_SUB(CURDATE(), INTERVAL 3 MONTH);
+SELECT *
+FROM employee
+WHERE MONTH(hiredate)=12;
+SELECT *
+FROM employee
+WHERE LEFT(hiredate,2)=RIGHT(sal,2);
+SELECT *
+FROM employee
+WHERE sal*0.10 = YEAR(hiredate);
+SELECT *
+FROM employee
+WHERE DAY(hiredate) < 15;
+SELECT *
+FROM employee
+WHERE DAY(hiredate) > 15;
+SELECT *
+FROM employee
+WHERE hiredate IS NOT NULL;
+

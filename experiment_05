@@ -1,0 +1,27 @@
+select COUNT(*) FROM employee;
+SELECT SUM(sal) FROM employee;
+SELECT MAX(sal) FROM employee;
+SELECT MIN(sal) FROM employee;
+SELECT AVG(sal) FROM employee;
+SELECT MAX(sal)
+FROM employee
+WHERE job='CLERK';
+SELECT MAX(sal)
+FROM employee
+WHERE deptno=20;
+SELECT MIN(sal)
+FROM employee
+WHERE job='SALESMAN';
+SELECT AVG(sal)
+FROM employee
+WHERE job='MANAGER';
+SELECT SUM(sal)
+FROM employee
+WHERE job='ANALYST' AND deptno=40;
+SELECT UPPER(ename) FROM employee;
+SELECT LOWER(ename) FROM employee;
+SELECT CONCAT(UCASE(LEFT(ename,1)),LCASE(SUBSTRING(ename,2)))
+FROM employee;
+SELECT LENGTH('YourName');
+SELECT ename, LENGTH(ename)
+FROM employee;
